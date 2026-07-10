@@ -16,7 +16,7 @@ const LinksTable = ({
   onEdit,
 }) => {
   const copyLink = (shortCode) => {
-  const shortUrl = `${import.meta.env.VITE_API_URL}/api/links/r/${shortCode}`;
+  const shortUrl = `${import.meta.env.VITE_API_URL}/links/r/${shortCode}`;
 
   navigator.clipboard.writeText(shortUrl);
   toast.success("Short URL Copied!");
