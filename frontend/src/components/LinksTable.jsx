@@ -123,7 +123,7 @@ const LinksTable = ({
 
               <td className="px-6 py-4">
 
-             <a href={`${import.meta.env.VITE_API_URL}/api/links/r/${link.shortCode}`}
+             <a href={`${import.meta.env.VITE_API_URL}/links/r/${link.shortCode}`}
                 target="_blank"
                 rel="noreferrer"
                 className="text-blue-600 hover:underline break-all"
