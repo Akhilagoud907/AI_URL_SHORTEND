@@ -128,7 +128,7 @@ const LinksTable = ({
                 rel="noreferrer"
                 className="text-blue-600 hover:underline break-all"
                 >
-                {`${import.meta.env.VITE_API_URL}/api/links/r/${link.shortCode}`}
+                {link.shortCode}
               </a>
 
               </td>
