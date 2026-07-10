@@ -9,7 +9,13 @@ const dashboardRoutes = require("./routes/dashboard.routes");
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",              // Local React app
+    "https://ai-url-shortend-1.onrender.com" // Render frontend
+  ],
+  credentials: true,
+}));
 app.use(express.json());
 app.use(morgan("dev"));
 
