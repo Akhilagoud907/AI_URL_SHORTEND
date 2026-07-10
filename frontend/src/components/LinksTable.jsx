@@ -122,15 +122,13 @@ const LinksTable = ({
               {/* Short URL */}
 
               <td className="px-6 py-4">
-
-             <a href={`${import.meta.env.VITE_API_URL}/links/r/${link.shortCode}`}
-                target="_blank"
-                rel="noreferrer"
-                className="text-blue-600 hover:underline break-all"
+                <a href={`${import.meta.env.VITE_API_URL}/links/r/${link.shortCode}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 transition"
                 >
-                {link.shortCode}
-              </a>
-
+                  🔗 {link.customAlias || link.shortCode}
+                </a>
               </td>
 
               {/* Status */}
