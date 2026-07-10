@@ -16,11 +16,11 @@ const LinksTable = ({
   onEdit,
 }) => {
   const copyLink = (shortCode) => {
-    navigator.clipboard.writeText(
-      `http://localhost:5000/api/links/r/${shortCode}`
-    );
-    toast.success("Short URL Copied!");
-  };
+  const shortUrl = `${import.meta.env.VITE_API_URL}/api/links/r/${shortCode}`;
+
+  navigator.clipboard.writeText(shortUrl);
+  toast.success("Short URL Copied!");
+};
 
   if (links.length === 0) {
     return (
@@ -123,14 +123,13 @@ const LinksTable = ({
 
               <td className="px-6 py-4">
 
-                <a
-  href={`http://localhost:5000/api/links/r/${link.shortCode}`}
-  target="_blank"
-  rel="noreferrer"
-  className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-200"
->
-  {link.shortCode}
-</a>
+             <a href={`${import.meta.env.VITE_API_URL}/api/links/r/${link.shortCode}`}
+                target="_blank"
+                rel="noreferrer"
+                className="text-blue-600 hover:underline break-all"
+                >
+                {`${import.meta.env.VITE_API_URL}/api/links/r/${link.shortCode}`}
+              </a>
 
               </td>
 
